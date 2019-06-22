@@ -1,0 +1,39 @@
+@import "../../../cssvars.scss";
+
+.navbar{
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+a{
+  color:white;
+  text-decoration: none;
+}
+
+.button {
+  background-color: mat-color($app-primary);
+  border-radius: 5px;
+  color: white;
+  padding: 5px;
+  margin: 5px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.header{
+  display: flex;
+
+}
+
+.utilitybar{
+  justify-content: space-between;
+}
+
+.themetoggle{
+  flex-grow: 1;
+}
+
+.languagebar{
+  flex-shrink: 2;
+}

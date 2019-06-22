@@ -1,0 +1,34 @@
+<mat-toolbar class="header" color="primary">
+  <mat-toolbar-row>
+    <img
+      mat-card-avatar
+      alt="Ng-Fast logo"
+      src="https://firebasestorage.googleapis.com/v0/b/ngfaster.appspot.com/o/icon_48.png?alt=media&token=7a60a1aa-9089-4c97-a106-3a02e36a7b04"
+      style="max-width: 48px;"
+    />
+    {{ title }}
+  </mat-toolbar-row>
+  <mat-toolbar-row class="utilitybar">
+    <mat-slide-toggle class="themetoggle"
+      [checked]="isDarkTheme | async"
+      (change)="toggleDarkTheme($event.checked)"
+      >Dark theme</mat-slide-toggle
+    >
+    <ng-container class="languagebar" *ngFor="let language of languageList">
+      <a href="/{{ language.code }}/">
+        <button class="button">{{ language.label }}</button>
+      </a>
+    </ng-container>
+  </mat-toolbar-row>
+</mat-toolbar>
+<mat-toolbar color="accent" class="navbar">
+  <div>
+    <a i18n routerLink="/home">Home</a>
+    &nbsp;
+    <a i18n routerLink="/about">About</a>
+    &nbsp;
+    <a i18n routerLink="/contact">Contact</a>
+    &nbsp;
+    <a i18n routerLink="/docs">Docs</a>
+  </div>
+</mat-toolbar>
